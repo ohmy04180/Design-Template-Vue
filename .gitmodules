@@ -1,0 +1,3 @@
+[submodule "iris-design-template/src/assets/style-core"]
+	path = iris-design-template/src/assets/style-core
+	url = https://github.com/mobigen/IRIS-Design-Core.git
