@@ -1,25 +1,29 @@
 <template>
-  <header class="header" id="header">
-    <div class="header__inner">
+  <header>
+    <div class="header">
+      <div class="header__inner">
       <h1 class="logo">
         <a href="#" class="logo__link" title="Company Logo">
           <font-awesome-icon icon="atom" aria-hidden="true" />
         </a>
       </h1>
       <div class="header__navigation">
-        <ul class="page-guide h-group">
-          <li
-            class="page-guide__item"
-            v-for="(item, index) in guideList"
-            :key="index"
-          >
-            <a href="#" class="page-guide__link button button--link">
-              {{ item }}
-            </a>
-          </li>
-        </ul>
+        <div class="page-guide">
+          <ul class="page-guide__list h-group">
+            <li
+              class="page-guide__item"
+              v-for="(item, index) in guideList"
+              :key="index"
+            >
+              <a href="#" class="page-guide__link button button--link">
+                {{ item }}
+              </a>
+            </li>
+          </ul>
+        </div>
         <global-navigation></global-navigation>
       </div>
+    </div>
     </div>
   </header>
 </template>
