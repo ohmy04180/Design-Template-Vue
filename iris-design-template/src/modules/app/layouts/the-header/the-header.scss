@@ -1,0 +1,51 @@
+.header {
+  height: rem(110px);
+
+}
+
+.header__inner {
+  @include layer('overlay');
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: $spacing-md $spacing-lg 0 $spacing-lg;
+  background-color: $ui-01;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $ui-04;
+    position: absolute;
+    top: rem(110px);
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo__link {
+  display: block;
+  padding: 20px $spacing-xl;
+}
+
+.header__navigation {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.page-guide {
+  margin-bottom: $spacing-xs;
+}

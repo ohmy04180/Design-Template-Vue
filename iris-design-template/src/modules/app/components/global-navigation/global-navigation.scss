@@ -1,0 +1,106 @@
+.gnb {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  transition: all .3s;
+
+  &:hover:not(:disabled),
+  &.gnb--lnb-open {
+    overflow: auto;
+    height: auto;
+
+    .gnb__list {
+      .lnb {
+        opacity: 1;
+        height: auto;
+        padding: $spacing-md 0 $spacing-lg;
+      }
+    }
+  }
+
+  &:focus-visible:not(:focus) {
+    outline: 3px solid blanchedalmond;
+    overflow: auto;
+    height: auto;
+
+    .gnb__list {
+      .lnb {
+        opacity: 1;
+        height: auto;
+        padding: $spacing-md 0 $spacing-lg;
+      }
+    }
+  }
+}
+
+.gnb__list {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.gnb__item {
+  position: relative;
+  height: 100%;
+
+  &:hover {
+    .gnb__button {
+      &:after {
+        content: '';
+        width: 80%;
+
+      }
+    }
+  }
+}
+
+.gnb__button {
+  @include button-normal;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: rem(11px) $spacing-md;
+  background-color: transparent;
+  border-bottom: none;
+  color: $primary;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: rem(3px);
+    background-color: $hover-primary;
+    transition: all .3s;
+  }
+
+  &:hover:not(:disabled) {
+    color: $hover-primary;
+  }
+
+  &:active:not(:disabled) {
+    color: $active-primary;
+  }
+
+  &:focus-visible:not(:focus-visible) {
+    outline: 0;
+  }
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $default-focus;
+  }
+}
+
+.gnb__text {
+  @include font-size("18");
+}
+
+.lnb {
+  opacity: 0;
+  height: 0;
+  transition: all .2s;
+}
