@@ -1,0 +1,149 @@
+// -------------------------
+// Select
+// -------------------------
+.select--open {
+
+  .select-selector__icon {
+    transform: rotate(-180deg);
+  }
+
+
+  &.select--borderless {
+    .select-selector__button {
+      .select-selector__icon {
+        color: $secondary;
+      }
+
+      &:hover:not(:disabled) {
+
+        .select-selector__icon {
+          color: $secondary;
+        }
+      }
+    }
+
+    // borderless - text-input
+    .select-selector__input {
+
+      & + .select-selector__icon {
+        color: $secondary;
+      }
+
+      &:hover:not(:disabled) {
+
+        & + .select-selector__icon {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+.select--disabled {
+  .select-selector__icon {
+    opacity: 0.5;
+  }
+
+  // borderless - text-input
+  &.select--borderless {
+    .select-selector__input {
+
+      & + .select-selector__icon {
+        color: $text-05;
+      }
+
+      &:hover:not(:disabled),
+      &:hover:active,
+      &:hover:focus {
+
+        & + .select-selector__icon {
+          color: $text-05 !important;
+        }
+      }
+
+      &:active {
+        & + .select-selector__icon {
+          color: $text-05 !important;
+        }
+      }
+
+      &:focus {
+
+        & + .select-selector__icon {
+          color: $text-05;
+        }
+      }
+    }
+  }
+}
+
+.select--open.select--disabled {
+  .select-selector__icon {
+    transform: none;
+  }
+}
+
+.select-selector__icon {
+  @include svg-icon-size(12px);
+  position: absolute;
+  top: 50%;
+  margin-top: rem(-6px);
+  right: $spacing-xs;
+  transform: none;
+  pointer-events: none;
+}
+
+.select-selector__icon-button .select-selector__icon {
+  position: static;
+  margin-top: 0;
+}
+
+// sm
+.select--sm {
+
+  .select-selector__icon {
+    right: rem(4px);
+    width: rem(18px);
+    height: rem(18px);
+    margin-top: -$spacing-xs;
+  }
+
+  .select-container {
+    .select-selector__icon {
+      @include svg-icon-size(14px);
+    }
+  }
+}
+
+.select--borderless {
+  .select-selector__button {
+    &:hover:not(:disabled) {
+      .select-selector__icon {
+        color: $text-01;
+      }
+    }
+
+    &:active {
+      .select-selector__icon {
+        color: $active-secondary;
+      }
+    }
+  }
+
+  // borderless - text-input
+  .select-selector__input {
+
+    &:hover:not(:disabled) {
+
+      & + .select-selector__icon {
+        color: $text-01;
+      }
+    }
+
+    &:active {
+      & + .select-selector__icon {
+        color: $secondary;
+      }
+    }
+  }
+}

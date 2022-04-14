@@ -1,31 +1,58 @@
 <template>
-  <nav class="gnb" :class="isLnbOpen ? 'gnb--lnb-open' : ''">
-    <ul class="gnb__list">
-      <li class="gnb__item" v-for="(item, index) in gnbList" :key="index">
-<!--        @blur="isLnbOpen = false"-->
-        <button type="button" class="gnb__button" @focus.self="isLnbOpen = true" >
+  <header>
+    <div class="header">
+      <div class="header__inner">
+      <h1 class="logo">
+        <a href="#" class="logo__link" title="Company Logo">
+          <font-awesome-icon icon="atom" class="svg-icon" aria-hidden="true" />
+        </a>
+      </h1>
+      <div class="header__navigation">
+        <div class="page-guide">
+          <ul class="page-guide__list h-group">
+            <li
+              class="page-guide__item"
+              v-for="(item, index) in guideList"
+              :key="index"
+            >
+              <a href="#" class="page-guide__link button button--link">
+                {{ item }}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <nav class="gnb" :class="isLnbOpen ? 'gnb--lnb-open' : ''">
+          <ul class="gnb__list">
+            <li class="gnb__item" v-for="(item, index) in gnbList" :key="index">
+              <!--        @blur="isLnbOpen = false"-->
+              <button type="button" class="gnb__button" @focus.self="isLnbOpen = true" >
           <span class="gnb__text">
             {{ item.title }}
           </span>
-        </button>
-        <ul class="lnb">
-          <li class="lnb__item" v-for="(lnbItem, index) in item.lnbList" :key="index">
-            <a :href="lnbItem.link" class="lnb__link button button--link" target="_blank">
+              </button>
+              <ul class="lnb">
+                <li class="lnb__item" v-for="(lnbItem, index) in item.lnbList" :key="index">
+                  <a :href="lnbItem.link" class="lnb__link button button--link" target="_blank">
               <span class="lnb__text">
                 {{ lnbItem.title }}
               </span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    </div>
+  </header>
 </template>
 
 <script>
 export default {
-  name: "GlobalNavigationBar",
-  components: {},
+  name: "TheHeader",
+  components: {
+  },
   data() {
     return {
       isLnbOpen: false,
@@ -131,12 +158,13 @@ export default {
             }
           ]
         }
-      ]
+      ],
+      guideList: ["로그인", "회원가입", "이용안내", "사이트맵"]
     };
   }
 };
 </script>
 
 <style lang="scss">
-@import "./global-navigation.scss";
+@import "the-header";
 </style>

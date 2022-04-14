@@ -5,11 +5,12 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {fas} from '@fortawesome/free-solid-svg-icons'
 import {far} from '@fortawesome/free-regular-svg-icons'
 import {fab} from '@fortawesome/free-brands-svg-icons'
+import BaseButton from "@/components/base/base-button/base-button";
 
 library.add(fas, far, fab)
 
-
 createApp(App)
+    .component("base-button", BaseButton)
     .component('font-awesome-icon', FontAwesomeIcon)
     .mount('#app')
 

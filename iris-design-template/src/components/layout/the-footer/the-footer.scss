@@ -1,0 +1,54 @@
+.footer{
+  width: rem(1280px);
+  margin: 0 auto;
+  padding: $spacing-md 0;
+}
+
+.footer__top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.policy__list {
+  display: flex;
+  align-items: center;
+}
+
+.policy__item{
+  & + &{
+    margin-left: $spacing-2xl;
+  }
+}
+
+.footer__company-information {
+  display: flex;
+  align-items: center;
+  margin-top: $spacing-2xs;
+}
+
+.footer__logo{
+  padding: rem(20px) $spacing-xl;
+
+  .svg-icon{
+    width: rem(36px);
+    height: rem(36px);
+  }
+}
+
+.company-information {
+  @include font-weight("light");
+  @include font-size("13");
+  margin-left: $spacing-sm;
+  color: $text-03;
+}
+
+.company-information__address{
+  font-style: normal;
+}
+
+.company-information__copyright{
+  margin-top: $spacing-2xs;
+}
+
+
