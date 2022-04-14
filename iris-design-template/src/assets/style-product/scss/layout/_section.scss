@@ -1,5 +1,31 @@
-.page-section{
+.page-section {
+  padding: $layout-lg 0;
+}
+
+.page-section__inner {
   width: rem(1280px);
   margin: 0 auto;
-  padding: $spacing-md 0;
+}
+
+.page-section__title {
+  @include font-weight("medium");
+  @include font-size("16");
+}
+
+.page-section__content {
+  margin-top: $spacing-sm;
+}
+
+.main-subject {
+  user-select: none;
+}
+
+.main-subject__title {
+  @include heading-03;
+  color: $primary;
+}
+
+.main-subject__text {
+  @include font-size("16");
+  margin-top: $spacing-xs;
 }
