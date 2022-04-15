@@ -1,0 +1,71 @@
+.main-data{
+  background: #e8ebee;
+}
+
+.data-application {
+  margin-top: $spacing-md;
+}
+
+.data-application__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data-application__link{
+  @include layer("raised");
+  position: relative;
+  width: rem(290px);
+  height: rem(310px);
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-lg;
+  background: $ui-02;
+  text-decoration: none;
+  border: 2px solid $ui-02;
+  border-radius: $field-border-radius;
+  transition: transform .3s ease-in-out;
+
+  &:hover{
+    border-color: $secondary;
+    transform: translateY(-8px);
+  }
+}
+
+.data-application__badge{
+  position: absolute;
+  top: $spacing-sm;
+  right: $spacing-sm;
+}
+
+.data-application__thumbnail{
+  overflow: hidden;
+  width: 100%;
+  height: rem(160px);
+  margin: 0 auto;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.data-application__information{
+  margin-top: $spacing-md;
+}
+
+.data-application__title{
+  @include text-overflow();
+  @include font-size("18");
+  @include font-weight("medium");
+  color: $text-01;
+}
+
+.data-application__text{
+  @include multi-text-overflow(18px, 2);
+  @include font-size("15");
+  @include font-weight("regular");
+  margin-top: $spacing-xs;
+  color: $text-02;
+}
