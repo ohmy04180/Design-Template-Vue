@@ -44,10 +44,13 @@ header {
 .logo__link {
   display: block;
   padding: rem(20px) $spacing-xl;
+  border: 2px dashed $hover-negative;
+  border-radius: 40%;
 
   .svg-icon {
     width: rem(36px);
     height: rem(36px);
+    color: $primary;
   }
 }
 

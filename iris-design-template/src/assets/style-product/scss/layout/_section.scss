@@ -12,20 +12,16 @@
   @include font-size("16");
 }
 
-.page-section__content {
-  margin-top: $spacing-sm;
-}
-
-.main-subject {
+.page-subject {
   user-select: none;
 }
 
-.main-subject__title {
+.page-subject__title {
   @include heading-03;
   color: $primary;
 }
 
-.main-subject__text {
+.page-subject__text {
   @include font-size("16");
   margin-top: $spacing-xs;
 }

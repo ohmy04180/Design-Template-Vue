@@ -2,11 +2,11 @@
   <section class="page-section main-banner">
     <div class="page-section__inner">
       <div class="main-banner__left-content">
-        <div class="main-subject">
-          <h2 class="main-subject__title">
+        <div class="page-subject">
+          <h2 class="page-subject__title">
             귀여운 동물 데이터의 세계
           </h2>
-          <p class="main-subject__text">
+          <p class="page-subject__text">
             궁금했던 동물의 이름을 검색해 보세요
           </p>
         </div>
@@ -24,12 +24,12 @@
         </div>
         <div class="main-banner__lists">
           <h4 class="page-section__title">카테고리</h4>
-          <div class="page-section__content">
-            <ul class="category-list">
-              <li class="category-list__item" v-for="(item, index) in categoryList" :key="index">
-                <a href="#" class="category-list__link">
-                  <font-awesome-icon :icon="item.icon" class="svg-icon category-list__icon"/>
-                  <span class="category-list__text">
+          <div class="banner-category">
+            <ul class="banner-category__list">
+              <li class="banner-category__item" v-for="(item, index) in categoryList" :key="index">
+                <a href="#" class="banner-category__link">
+                  <font-awesome-icon :icon="item.icon" class="svg-icon banner-category__icon"/>
+                  <span class="banner-category__text">
                     {{ item.text }}
                   </span>
                 </a>

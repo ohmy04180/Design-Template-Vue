@@ -1,5 +1,5 @@
 .main-banner {
-  background-color: $ui-01;
+  background-color: $ui-04;
 
   .page-section__inner {
     display: flex;
@@ -27,20 +27,24 @@
   margin-top: $spacing-2xl;
 }
 
-.category-list {
+.banner-category {
+  margin-top: $spacing-md;
+}
+
+.banner-category__list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   margin: 0 0 -4px -4px;
 }
 
-.category-list__item {
+.banner-category__item {
   width: calc(100% / 5 - 4px);
   margin: 0 0 4px 4px;
   border-radius: $button-border-radius;
 }
 
-.category-list__link {
+.banner-category__link {
   @include layer("raised");
   display: flex;
   height: rem(90px);
@@ -50,28 +54,28 @@
   background-color: $ui-02;
   border-radius: $button-border-radius;
   text-decoration: none;
-  transition: all .3s;
+  transition: all .3s ease-in-out;
 
   &:hover:not(:disabled) {
     background-color: $secondary;
 
-    .category-list__icon {
+    .banner-category__icon {
       color: $ui-02;
     }
 
-    .category-list__text {
+    .banner-category__text {
       color: $ui-02;
     }
   }
 }
 
-.category-list__icon.svg-icon {
+.banner-category__icon.svg-icon {
   width: rem(24px);
   height: rem(24px);
   color: $secondary;
 }
 
-.category-list__text {
+.banner-category__text {
   @include font-size("14");
   margin-top: $spacing-sm;
 }

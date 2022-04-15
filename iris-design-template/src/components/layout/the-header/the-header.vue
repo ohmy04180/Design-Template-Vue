@@ -4,7 +4,7 @@
       <div class="header__inner">
       <h1 class="logo">
         <a href="#" class="logo__link" title="Company Logo">
-          <font-awesome-icon icon="atom" class="svg-icon" aria-hidden="true" />
+          <font-awesome-icon icon="cat" class="svg-icon" aria-hidden="true" />
         </a>
       </h1>
       <div class="header__navigation">
