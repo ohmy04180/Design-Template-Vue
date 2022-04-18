@@ -10,12 +10,12 @@
   align-items: center;
 }
 
-.policy__list {
+.policy-list {
   display: flex;
   align-items: center;
 }
 
-.policy__item{
+.policy-list__item{
   & + &{
     margin-left: $spacing-2xl;
   }

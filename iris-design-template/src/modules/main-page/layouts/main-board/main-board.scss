@@ -1,0 +1,130 @@
+.main-board{
+  background-color: #eff1f3;
+  .page-section__inner{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+.main-board__top-bar{
+  display: flex;
+  align-items: flex-end;
+  height: rem(32px);
+  margin-bottom: $spacing-sm;
+}
+
+.main-board__view-more{
+  margin-left: auto;
+}
+
+.main-board__group{
+
+  &.main-board__group--data{
+  width: calc(50% - 160px - 25px);
+  }
+
+  &.main-board__group--notice{
+  width: calc(50% - 160px - 25px);
+  }
+
+  &.main-board__group--deal{
+    width: rem(320px);
+  }
+
+  & + &{
+    margin-left: $spacing-lg;
+  }
+}
+
+.data-list__item{
+  & + &{
+    margin-top: $spacing-xs;
+  }
+}
+
+.data-list__link{
+  @include layer("raised");
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: $spacing-sm $spacing-lg $spacing-sm 0;
+  background: $ui-02;
+  border: 2px solid $ui-02;
+  border-radius: $field-border-radius;
+  transition: border .3s ease-in-out;
+
+  &:hover{
+    border-color: $secondary;
+  }
+}
+
+.data-list__visual{
+  @include font-size("24");
+  @include font-weight("medium");
+  color: $primary;
+  width: rem(72px);
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.data-list__information{
+  flex-grow: 1;
+
+  &:only-child{
+    padding-left: $spacing-lg;
+  }
+}
+
+.data-list__title{
+  @include text-overflow();
+  @include font-weight("medium");
+  color: $text-01;
+  font-size: rem(17px);
+}
+
+.data-list__text{
+  @include multi-text-overflow(18px, 2);
+  @include font-size("13");
+  @include font-weight("light");
+  margin-top: $spacing-xs;
+  color: $text-02;
+}
+
+.notice-list__link{
+  display: flex;
+  align-items: center;
+  padding: $spacing-sm $spacing-lg $spacing-sm 0;
+  background: $ui-02;
+  border-radius: $field-border-radius;
+  transition: background .3s ease-in-out;
+
+  &:hover{
+    background: rgba(147, 206, 255, 0.49);
+  }
+}
+
+.notice-list__badge{
+  width: rem(72px);
+}
+
+.notice-list__information{
+
+  &:only-child{
+    padding-left: $spacing-lg;
+  }
+}
+
+.notice-list__title{
+  @include text-overflow();
+  @include font-size("15");
+  @include font-weight("regular");
+  color: $text-01;
+}
+
+.notice-list__text{
+  @include font-size("13");
+  @include font-weight("light");
+  margin-top: $spacing-3xs;
+  color: $text-02;
+}

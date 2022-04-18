@@ -21,7 +21,6 @@
   flex-direction: column;
   padding: $spacing-lg;
   background: $ui-02;
-  text-decoration: none;
   border: 2px solid $ui-02;
   border-radius: $field-border-radius;
   transition: transform .3s ease-in-out;
@@ -64,8 +63,8 @@
 
 .data-application__text{
   @include multi-text-overflow(18px, 2);
-  @include font-size("15");
-  @include font-weight("regular");
+  @include font-size("14");
+  @include font-weight("light");
   margin-top: $spacing-xs;
   color: $text-02;
 }

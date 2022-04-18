@@ -2,31 +2,28 @@
   <footer>
     <div class="footer">
       <div class="footer__top-bar">
-        <div class="policy">
-          <ul class="policy__list">
-            <li class="policy__item">
-              <a href="#" class="policy__link button button--link button--sm">
+          <ul class="policy-list">
+            <li class="policy-list__item">
+              <a href="#" class="policy-list__link button button--link button--sm">
                 이용약관
               </a>
             </li>
-            <li class="policy__item">
-              <a href="#" class="policy__link button button--link button--sm">
+            <li class="policy-list__item">
+              <a href="#" class="policy-list__link button button--link button--sm">
                 개인정보처리방침
               </a>
             </li>
-            <li class="policy__item">
-              <a href="#" class="policy__link button button--link button--sm">
+            <li class="policy-list__item">
+              <a href="#" class="policy-list__link button button--link button--sm">
                 저작권정책
               </a>
             </li>
-            <li class="policy__item">
-              <a href="#" class="policy__link button button--link button--sm">
+            <li class="policy-list__item">
+              <a href="#" class="policy-list__link button button--link button--sm">
                 개인정보침해 신고센터
               </a>
             </li>
           </ul>
-
-        </div>
         <!-- select--open 클래스 추가시 open -->
         <div class="select select-company" role="select">
           <div class="select-selector" aria-expanded="false" aria-controls="select-01">
